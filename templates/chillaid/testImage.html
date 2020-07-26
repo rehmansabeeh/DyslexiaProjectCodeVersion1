@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--
+Template Name: Chillaid
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Chillaid</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{url_for('static', filename='layout/styles/layout.css')}}"  rel="stylesheet" type="text/css" media="all">
+<style>
+p
+{
+color: #282E39
+}
+
+label
+{ color:#282E39
+}
+
+button {
+	background-color: #4CAF50;
+}
+
+article
+{
+    display: inline-table;
+}
+
+li
+{ display: flex }
+th{
+background:none;
+padding:0%
+}
+
+img
+{
+width:340px;
+height:300px
+}
+</style>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Fonts</a>
+          <ul>
+            <li><a href="gallery.html">Nastalaiq</a></li>
+            <li><a href="full-width.html">Arabic</a></li>
+            <li><a href="font-icons.html">Font Icons</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Languages</a>
+          <ul>
+            <li><a href="#">Urdu</a></li>
+            <li><a class="drop" href="#">English</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay light" style="background-image:url('/static/images/demo/backgrounds/back.jpg'); display: flow-root;">
+  <h2 style="padding: 2%; text-align:center;"><b>Please tell us, what you see ?</b></h2>
+  <div class = "row2">
+        
+        <ul>
+           <li >
+            <article class="one_third">
+              <div style="display:table-cell; vertical-align:middle; text-align:center; border: black 1px 1px;border-style: solid;">
+                <img src="{{url_for('static', filename='/images/banana.jpg')}}" alt=""/>
+              
+             <table style="width: 340px;  margin: 0;">
+				<tbody>
+					<th style="background: none;border:none"><td  style="border:none"> <input type="radio" id="male" name="gender" value="male"> </td><td style="border:none" ><label for="male" style="font-size: large;">کیلا</label> </td> </th>
+					<th style="background: white;border:none"><td style="border:none"> <input type="radio" id="female" name="gender" value="female"> </td> <td style="border:none"><label for="female" style="font-size: large;">گیلا</label></td> </th>
+					<th style="background: white;border:none"><td style="border:none">  <input type="radio" id="other" name="gender" value="other"> </td> <td style="border:none"> <label for="other" style="font-size: large;">کلا</label></td> </th>
+				</tbody>
+      </table>
+    </div>	
+            </article>
+            <article class="one_third">
+              <div style="display:table-cell; vertical-align:middle; text-align:center; border: black 1px 1px;border-style: solid;">              
+                <img src="{{url_for('static', filename='images/fruit.jpg')}}" alt=""/>                                                                          
+              
+             <table style="width: 340px; margin: 0;">
+				<tbody>
+					<th style="background: none;border:none"><td  style="border:none"> <input type="radio" id="male" name="gender" value="male"> </td><td style="border:none" ><label for="male" style="font-size: large;">پھل</label> </td> </th>
+					<th style="background: white;border:none"><td style="border:none"> <input type="radio" id="female" name="gender" value="female"> </td> <td style="border:none"><label for="female" style="font-size: large;">پل</label></td> </th>
+					<th style="background: white;border:none"><td style="border:none">  <input type="radio" id="other" name="gender" value="other"> </td> <td style="border:none"> <label for="other" style="font-size: large;">پال</label></td> </th>
+				</tbody>
+      </table>	
+    </div>
+      
+            </article>
+              <article class="one_third">
+              <div style="display:table-cell; vertical-align:middle; text-align:center; border: black 1px 1px;border-style: solid;">
+                <img src="{{url_for('static', filename='images/anar.jpg')}}" alt=""/>
+              
+             <table style="width: 340px; margin: 0;">
+				<tbody>
+					<th style="background: none;border:none"><td  style="border:none"> <input type="radio" id="male" name="gender" value="male"> </td><td style="border:none" ><label for="male" style="font-size: large;">انار</label> </td> </th>
+					<th style="background: white;border:none"><td style="border:none"> <input type="radio" id="female" name="gender" value="female"> </td> <td style="border:none"><label for="female" style="font-size: large;">اناد</label></td> </th>
+					<th style="background: white;border:none"><td style="border:none">  <input type="radio" id="other" name="gender" value="other"> </td> <td style="border:none"> <label for="other" style="font-size: large;">امار</label></td> </th>
+				</tbody>
+      </table>
+    </div>	
+            </article>
+          </li>           
+        </ul>         
+      </div>
+	 <div style="width: 100%;
+    display: flex;" >
+  <form action="/" method="post"  style="width:50%">
+	 <div >
+		   <button  type="submit"style=" width: 150px;padding: 14px 20px;float: right;margin: 2%;">Finish</button>
+    </div>
+    </form>
+    <form action="/taketest" method="post"  style="width:50%">
+
+		<div >
+			<button type="submit"style=" width: 150px; padding: 14px 20px; margin: 2%;" >Take Test</button>
+    </div>
+    </form>
+
+	</div>
+      <!-- ################################################################################################ -->
+    </div>
+</div>
+
+
+ 
+<div class="bgded overlay row4" style="background-image:url('/static/images/demo/backgrounds/01.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <p>Qawaid 4 Dyslexia will enable dylexics to boost up their confidence by improving their Urdu writing an readig ability. The website will provide a custmise experience to its users. [<a href="#">&hellip;</a>]</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </div>
+   
+    
+    </div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved</p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>/5
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{{url_for('static', filename='layout/scripts/jquery-1.7.1.min.js')}}"></script>
+
+<script src="{{url_for('static', filename='layout/scripts/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.mobilemenu.js')}}"></script>
+<!-- / Homepage specific -->
+</body>
+</html>

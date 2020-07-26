@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--
+Template Name: Chillaid
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Chillaid | Pages | Basic Grid</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<link href="{{url_for('static', filename='layout/styles/layout.css')}}"" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1; }
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+    padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="exponential.js"></script>
+<script  type="text/javascript">
+
+</script>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Fonts</a>
+          <ul>
+            <li><a href="gallery.html">Nastalaiq</a></li>
+            <li><a href="full-width.html">Arabic</a></li>
+            <li><a href="font-icons.html">Font Icons</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Languages</a>
+          <ul>
+            <li><a href="#">Urdu</a></li>
+            <li><a class="drop" href="#">English</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div style=" height:30px; width: 100%; background:white; padding:5px;  ">
+  <h2 align="center">Register<h2>
+   
+</div>
+
+<div class="wrapper row2">
+  <div style="display: -webkit-inline-box; height:550px ; width: 100%;">
+	
+	<div  style="height:100% ; width: 50%;">
+	  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+	</div>
+
+	<div style="height:100% ; width: 40%;">
+    <div  style="height:50% ; background-color: #D3D3D3; margin: 2%;" id="h7_tag">
+	<form action="http://127.0.0.1:5000/registration" method="post">
+  <div class="container">	
+	  <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>	
+    <label for="pws"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>   
+    
+    <p>Are you Dyslexic ? :</p>
+    <input type="radio" id="yes" name="isDyslexic" value="yes">
+    <label for="male">Yes</label><br>
+    <input type="radio" id="no" name="isDyslexic" value="no">
+    <label for="female">No</label><br>
+
+    <p>Do you find difficulty in reading ? :</p>
+    <input type="radio" id="yes" name="reading" value="yes">
+    <label for="male">Yes</label><br>
+    <input type="radio" id="no" name="reading" value="no">
+    <label for="female">No</label><br>
+    <button type="submit">Register</button>
+
+    <p>Which language do you like the most?</p>
+    <input type="radio" id="Urdu" name="language" value="Urdu">
+    <label for="male">Urdu</label><br>
+    <input type="radio" id="English" name="language" value="English">
+    <label for="female">English</label><br>
+    <button type="submit">Register</button>
+
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+  </div>
+</form>
+
+
+
+	</div>
+	</div>
+	
+	<div  style="height:100% ; width: 10%;">
+
+    </div>
+	
+
+  
+
+
+  
+  
+    <!-- ################################################################################################ -->
+
+</div>
+<!-- ###
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+  <main class="hoc container clear" style="padding-top: 20px;
+    padding-bottom: 20px;"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    
+      <!-- ################################################################################################ -->
+     
+    <!-- ################################################################################################ -->
+
+      <!-- ################################################################################################ 
+      <!-- ######   ########################################################################################## -->
+    
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!---############################################################################################# -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- <div class="bgded overlay" style="background-image:C:\Users\rabia.riaz\Desktop\App\static\images\demo\backgrounds\01.png">
+</div>
+<div class="bgded overlay row4" style="background-image:C:\Users\rabia.riaz\Desktop\App\static\images\demo\backgrounds\01.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <!-- <div class="one_quarter first">
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <p>Qawaid 4 Dyslexia will enable dylexics to boost up their confidence by improving their Urdu writing an readig ability. The website will provide a custmise experience to its users. [<a href="#">&hellip;</a>]</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </div> --> -->
+   
+    
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+
+
+
+<script src="F:/New folder/App2/static/layout/scripts/jquery.min.js"></script>
+<script src="F:/New folder/App2/static/layout/scripts/jquery.backtotop.js"></script>
+<script src="F:/New folder/App2/static/layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

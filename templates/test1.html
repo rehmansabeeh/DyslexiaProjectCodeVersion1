@@ -1,0 +1,80 @@
+<body>
+<form action="/test1page2" method="post">
+
+<ul>    
+    <!-- <audio  id = "0" controls = "controls", autoplay = "autoplay"></audio> -->
+    <audio  id = "1" controls = "controls", autoplay = "autoplay" onclick="playSong('{{audio0}}',1)"></audio>
+    
+    <!-- <li><a href="javascript:void(0);" onclick="playSong('{{audio0}}', 0)">{{audio0}}</a></li> -->
+    <p>Please select your gender:</p>
+    <input type="radio" id="male" name="question1" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="question1" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="question1" value="other">
+    <label for="other">Other</label>
+</ul>
+
+<ul>
+    <audio  id = "1" controls = "controls", autoplay = "autoplay"></audio>
+   <li><a href="javascript:void(0);" onclick="playSong('{{audio1}}',1)">{{audio1}}</a></li>
+   <p>Please select your gender:</p>
+   <input type="radio" id="male" name="question2" value="male">
+   <label for="male">Male</label><br>
+   <input type="radio" id="female" name="question2" value="female">
+   <label for="female">Female</label><br>
+   <input type="radio" id="other" name="question2" value="other">
+   <label for="other">Other</label>
+</ul>
+
+<ul>
+    <audio  id = "2" controls = "controls", autoplay = "autoplay"></audio> 
+   <li><a href="javascript:void(0);" onclick="playSong('{{audio2}}'),2">{{audio2}}</a></li>
+   <p>Please select your gender:</p>
+   <input type="radio" id="male" name="question3" value="male">
+   <label for="male">Male</label><br>
+   <input type="radio" id="female" name="question3" value="female">
+   <label for="female">Female</label><br>
+   <input type="radio" id="other" name="question3" value="other">
+   <label for="other">Other</label>
+</ul>
+
+<ul>
+    <audio  id = "3" controls = "controls", autoplay = "autoplay"></audio>
+   <li><a href="javascript:void(0);" onclick="playSong('{{audio3}}',3)">{{audio3}}</a></li>
+   <p>Please select your gender:</p>
+   <input type="radio" id="male" name="question4" value="male">
+   <label for="male">Male</label><br>
+   <input type="radio" id="female" name="question4" value="female">
+   <label for="female">Female</label><br>
+   <input type="radio" id="other" name="question4" value="other">
+   <label for="other">Other</label>
+</ul>
+<ul>
+    <audio  id = "4"  controls = "controls", autoplay = "autoplay" src = ></audio>
+   <li><a href="javascript:void(0);" onclick="playSong('{{audio4}}',4)">{{audio4}}</a></li>
+   <p>Please select your gender:</p>
+   <input type="radio"  id="male" name="question5" value="male">
+   <label for="male">Male</label><br>
+   <input type="radio" id="female" name="question5" value="female">
+   <label for="female">Female</label><br>
+   <input type="radio" id="other" name="question5" value="other">
+   <label for="other">Other</label>
+   <input type=submit value=Next>
+
+</ul>
+</form>
+
+<script type = "text/javascript">
+	function playSong(song, id){
+        var id = '#' + id
+        $(id).attr('src','/static/audio/'+ song)
+        console.log(id)
+	}
+</script>
+
+<script src="{{url_for('static', filename='layout/scripts/jquery-1.7.1.min.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.mobilemenu.js')}}"></script>
+</body>

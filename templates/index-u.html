@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--
+Template Name: Chillaid
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Chillaid | Pages | Basic Grid</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link href="{{url_for('static', filename='layout/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+/* DEMO ONLY */
+.container .demo{text-align:center;}
+.container .demo div{padding:8px 0;}
+.container .demo div:nth-child(odd){color:#FFFFFF; background:#CCCCCC;}
+.container .demo div:nth-child(even){color:#FFFFFF; background:#979797;}
+@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
+/* DEMO ONLY */
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="exponential.js"></script>
+<script  type="text/javascript">
+  $(document).ready(function(){
+    var words= ("{{f}}").split(",")
+
+    var str = ""
+
+    for ( var i = 0 ; i< words.length ; i++)
+    {
+        str = words[i];
+        str = str.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'");
+        document.getElementById("h6_tag").innerHTML =  document.getElementById("h6_tag").innerHTML + str ;
+
+    }
+    var suggestedwords= ("{{correct}}").split(",")
+    var sword = ""
+    for (var j = 0; j<suggestedwords.length; j++)
+    {
+      sword = suggestedwords[j];
+      sword = sword.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'");
+      document.getElementById("h7_tag").innerHTML = document.getElementById("h7_tag").innerHTML + sword ;
+    }
+    var wrongWordsCount = "{{spellCount}}"
+    debugger
+    var wrongWordsCount = 2
+    if(wrongWordsCount > 0)
+    {
+      document.getElementById("grammer_check").innerHTML = document.getElementById("grammer_check").innerHTML + "(" + wrongWordsCount + ")";
+     $('#grammer_check').css('color', 'red');      
+    }
+  })
+  
+</script>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Fonts</a>
+          <ul>
+            <li><a href="gallery.html">Nastalaiq</a></li>
+            <li><a href="full-width.html">Arabic</a></li>
+            <li><a href="font-icons.html">Font Icons</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Languages</a>
+          <ul>
+            <li><a href="#">Urdu</a></li>
+            <li><a class="drop" href="#">English</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay light" style="background-image:url('/static/images/demo/backgrounds/back.jpg')">
+<div style=" height:60px; width: 100%; padding:10px; ">
+  <h2 align="center">آپ کے نتاہج<h2>
+   
+</div>
+<form action="." method="post">
+<div class="wrapper row2">
+  <div style="display: -webkit-inline-box; height:350px ; width: 100%;">
+    <div  style="height:100% ; width: 20%;">
+      <div style = "top: 0%; position: relative;">
+        <p style="padding:10%; font-size: large" id="grammer_check"> <img src="{{url_for('static', filename='images/demo/circle.png')}}" style="vertical-align: bottom; max-width: 9%;"> Grammer check</p>
+<p style=" padding:10%; font-size: large" id="spell_check"> <img src="{{url_for('static', filename='images/demo/circle.png')}}" style="vertical-align: bottom; max-width: 9%;"> Spell check</p>
+<p style="padding:10%; font-size: large" id="sentence_structure"> <img src="{{url_for('static', filename='images/demo/circle.png')}}" style="vertical-align: bottom; max-width: 9%;"> Sentence structure</p>
+    </div>
+  </div>
+
+  <div style="height:100% ; width: 60%;">
+    <div  style="height:40% ; background-color: white ; margin: 2%; font-size: 35px; text-align: right;" id="h6_tag"> </div>
+    <div  style="height:40% ; background-color: #D3D3D3; margin: 2%;font-size: 35px; text-align: right;" id="h7_tag"> </div>
+  </div>
+
+    <div  style="height:100% ; width: 20%;">
+      <div style="height:50%">
+      <img src="{{url_for('static', filename='images/demo/grammar_check.svg')}}" alt="Punctuation Check" style="display: block;
+    margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; width: 30%; height: 50%; padding:5%">
+      <p style="text-align: center;"> Grammer check</p></div>
+    <div style="height:50%">
+      <img src="{{url_for('static', filename='images/demo/grammar_check.svg')}}" alt="Punctuation Check" style="display: block;
+    margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; width: 30%; height: 50%; padding:5%">
+      <p id="spell_check_word" style="text-align: center;"> Spell Check</p>
+    </div>
+  </div>
+
+  </div>
+
+
+  
+  
+    <!-- ################################################################################################ -->
+
+</div>
+<!-- ###
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper">
+  <main class="hoc container clear" style="padding-top: 40px;
+    padding-bottom: 40px;"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    
+      <!-- ################################################################################################ -->
+     
+    <!-- ################################################################################################ -->
+      <!-- ################################################################################################ 
+      <!-- ######   ########################################################################################## -->
+    
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+</form>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!---############################################################################################# -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</div>
+<div class="bgded overlay row4" style="background-image:url('/static/images/demo/backgrounds/01.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <p>Qawaid 4 Dyslexia will enable dylexics to boost up their confidence by improving their Urdu writing an readig ability. The website will provide a custmise experience to its users. [<a href="#">&hellip;</a>]</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </div>
+   
+    
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+
+
+
+<script src="{{url_for('static', filename='layout/scripts/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename='layout/scripts/jquery.mobilemenu.js')}}"></script>
+</body>
+</html>

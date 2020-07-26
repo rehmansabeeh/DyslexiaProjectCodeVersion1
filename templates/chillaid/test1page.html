@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+Template Name: Chillaid
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Chillaid</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{url_for('static', filename='layout/styles/layout.css')}}"  rel="stylesheet" type="text/css" media="all">
+<style>
+label
+{ color:#282E39}
+button {
+  background-color: #4CAF50;
+}
+
+
+audio
+{
+margin:2%;
+width: 440px;
+}
+</style>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Fonts</a>
+          <ul>
+            <li><a href="gallery.html">Nastalaiq</a></li>
+            <li><a href="full-width.html">Arabic</a></li>
+            <li><a href="font-icons.html">Font Icons</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Languages</a>
+          <ul>
+            <li><a href="#">Urdu</a></li>
+            <li><a class="drop" href="#">English</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<form action="/test1page2" method="post">
+
+<div class="bgded overlay light" style="background-image:url('/static/images/demo/backgrounds/back.jpg');">
+  <section class="hoc container clear">  
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs" style="font-size: large;"> <b>Play the following audios</b></p>
+      <h6 class="heading font-x2" style="font-size: large;"><b>Tell us what you listen</b></h6>
+    </div>
+    <ul class="nospace group team">
+      <li >
+        <form action="/test1page2" method="post">
+
+        <table>
+			<tbody>
+        <th style="width:600px"><audio  id = "1" controls> <source src="{{url_for('static', filename='audio/' + audio0)}}" type="audio/mpeg"></audio></th>
+        <!-- <th><audio  id = "1" controls = "controls", autoplay = "autoplay" onclick="playSong('{{audio1}}',1)"></audio></th> -->
+				<th style='background-color: white;'>
+					<figcaption><a href='#'> <strong></strong></a>
+							<table style="border:none">
+								<tbody style='background-color: white;'>
+									<th style="background-color: white;border:none"><td  style="border:none"> <input type="radio" id="male" name="question1" value="کھانا"> </td><td style="border:none" ><label for="male" style="font-size: large;">کھانا </label> </td> </th>
+									<th style="background-color: white;border:none"><td style="border:none"> <input type="radio" id="female" name="question1" value="کانا"> </td> <td style="border:none"><label for="female" style="font-size: large;">کانا</label></td> </th>
+									<th style="background-color: white;border:none"><td style="border:none">  <input type="radio" id="other" name="question1" value="گانا"> </td> <td style="border:none"> <label for="other" style="font-size: large;">گانا</label></td> </th>
+								</tbody>
+							</table>	
+				</th>
+			</tbody>  
+		</table>
+      </li>
+           <li >
+        <table>
+			<tbody>
+				<th style="width:600px"><audio controls> <source src="{{url_for('static', filename='audio/' + audio1)}}" type="audio/mpeg"></audio></th>
+				<th style='background-color: white;'>
+					<figcaption><a href='#'> <strong> </strong></a>
+							<table style="border:none">
+								<tbody style='background-color: white;'>
+									<th style="background-color: white;border:none"><td  style="border:none"> <input type="radio" id="male" name="question2" value="male"> </td><td style="border:none" ><label for="male" style="font-size: large;">سمر</label> </td> </th>
+									<th style="background-color: white;border:none"><td style="border:none"> <input type="radio" id="female" name="question2" value="female"> </td> <td style="border:none"><label for="female" style="font-size: large;">ثمر</label></td> </th>
+									<th style="background-color: white;border:none"><td style="border:none">  <input type="radio" id="other" name="question2" value="other"> </td> <td style="border:none"> <label for="other" style="font-size: large;">صمر</label></td> </th>
+								</tbody>
+							</table>	
+				</th>
+			</tbody>  
+		</table>
+      </li>
+	        <li >
+        <table>
+			<tbody>
+				<th style="width:600px"><audio controls> <source src="{{url_for('static', filename='audio/' + audio2)}}"  type="audio/mpeg"></audio></th>
+				<th style='background-color: white;'>
+					<figcaption><a href='#'> <strong></strong></a>
+							<table style="border:none">
+								<tbody style='background-color: white;'>
+									<th style="background-color: white;border:none"><td  style="border:none"> <input type="radio" id="male" name="question3" value="male"> بچہ</td><td style="border:none" ><label for="male" style="font-size: large;">کرسی</label> </td> </th>
+									<th style="background-color: white;border:none"><td style="border:none"> <input type="radio" id="female" name="question3" value="female">بجہ </td> <td style="border:none"><label for="female" style="font-size: large;">کرصی</label></td> </th>
+									<th style="background-color: white;border:none"><td style="border:none">  <input type="radio" id="other" name="question3" value="other">بچا </td> <td style="border:none"> <label for="other" style="font-size: large;">گرسی</label></td> </th>
+								</tbody>
+							</table>	
+				</th>
+			</tbody>  
+		</table>
+      </li>
+	        <li >
+        <table>
+			<tbody>
+				<th style="width:600px" ><audio controls> <source src="{{url_for('static', filename='audio/' + audio3)}}" type="audio/mpeg"></audio></th>
+				<th style='background-color: white;'>
+					<figcaption><a href='#'> <strong></strong></a>
+							<table style="border:none">
+								<tbody style='background-color: white;'>
+									<th style="background-color: white;border:none"><td  style="border:none"> <input type="radio" id="male" name="question4" value="male"> </td><td style="border:none" ><label for="male" style="font-size: large;"> خان</label> </td> </th>
+									<th style="background-color: white;border:none"><td style="border:none"> <input type="radio" id="female" name="question4" value="female"> </td> <td style="border:none"><label for="female" style="font-size: large;">کان</label></td> </th>
+									<th style="background-color: white;border:none"><td style="border:none">  <input type="radio" id="other" name="question4" value="other"> </td> <td style="border:none"> <label for="other" style="font-size: large;">گان</label></td> </th>
+								</tbody>
+							</table>	
+				</th>
+			</tbody>  
+		</table>
+      </li>
+      
+    </ul>
+    <button type="submit"style="margin:auto;width:150px;
+      padding: 14px 20px;">Next</button>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+</form>
+ 
+<div class="bgded overlay row4" style="background-image:url('/static/images/demo/backgrounds/01.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h1 class="logoname">Qawaid<span>4</span>Dyslexia</h1>
+      <p>Qawaid 4 Dyslexia will enable dylexics to boost up their confidence by improving their Urdu writing an readig ability. The website will provide a custmise experience to its users. [<a href="#">&hellip;</a>]</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </div>
+   
+    
+    </div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved</p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+
+
+<script type = "text/javascript">
+	function playSong(song, id){
+        var id = '#' + id
+        $(id).attr('src','/static/audio/'+ song)
+        console.log(id)
+	}
+</script>
+
+<script src="{{url_for('static', filename='layout/scripts/jquery-1.7.1.min.js')}}"></script>
+
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- Homepage specific -->
+<!-- <script src="layout/scripts/jquery.easypiechart.min.js"></script> -->
+<!-- / Homepage specific -->
+</body>
+</html>
